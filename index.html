@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        function removePrivilegeMask() {
+          const masks = document.querySelectorAll('#privilege-mask, .privilege-mask');
+          masks.forEach(function(el) {
+            el.remove();
+          });
+        }
+        removePrivilegeMask();
+        if (typeof MutationObserver !== 'undefined') {
+          var observer = new MutationObserver(function() {
+            removePrivilegeMask();
+          });
+          observer.observe(document.documentElement, { childList: true, subtree: true });
+        }
+        window.addEventListener('DOMContentLoaded', removePrivilegeMask);
+        window.addEventListener('load', removePrivilegeMask);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
