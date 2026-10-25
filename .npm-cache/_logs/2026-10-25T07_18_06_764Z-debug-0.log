@@ -1,0 +1,32 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/workspace/.npmrc
+5 silly config load:file:/home/node/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm audit
+8 verbose argv "audit" "--json"
+9 verbose logfile logs-max:10 dir:/workspace/.npm-cache/_logs/2026-10-25T07_18_06_764Z-
+10 verbose logfile /workspace/.npm-cache/_logs/2026-10-25T07_18_06_764Z-debug-0.log
+11 silly packumentCache heap:271581184 maxSize:67895296 maxEntrySize:33947648
+12 silly logfile done cleaning log files
+13 verbose stack Error: loadVirtual requires existing shrinkwrap file
+13 verbose stack     at Arborist.loadVirtual (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/load-virtual.js:51:18)
+13 verbose stack     at async Arborist.audit (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/index.js:241:14)
+13 verbose stack     at async Audit.auditAdvisories (/usr/local/lib/node_modules/npm/lib/commands/audit.js:69:5)
+13 verbose stack     at async Audit.exec (/usr/local/lib/node_modules/npm/lib/commands/audit.js:49:7)
+13 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+13 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+14 error code ENOLOCK
+15 error audit This command requires an existing lockfile.
+16 error audit Try creating one first with: npm i --package-lock-only
+17 error audit Original error: loadVirtual requires existing shrinkwrap file
+18 silly unfinished npm timer audit 1792912687080
+19 verbose cwd /workspace
+20 verbose os Linux 6.18.33.2-microsoft-standard-WSL2
+21 verbose node v20.20.2
+22 verbose npm  v10.8.2
+23 verbose exit 1
+24 verbose code 1
+25 error A complete log of this run can be found in: /workspace/.npm-cache/_logs/2026-10-25T07_18_06_764Z-debug-0.log

@@ -1,0 +1,33 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.20.2
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/workspace/.npmrc
+5 silly config load:file:/home/node/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm audit
+8 verbose argv "audit" "--json"
+9 verbose logfile logs-max:10 dir:/workspace/.npm-cache/_logs/2026-10-25T07_32_28_732Z-
+10 verbose logfile /workspace/.npm-cache/_logs/2026-10-25T07_32_28_732Z-debug-0.log
+11 silly packumentCache heap:271581184 maxSize:67895296 maxEntrySize:33947648
+12 silly logfile start cleaning logs, removing 1 files
+13 silly logfile done cleaning log files
+14 verbose stack Error: loadVirtual requires existing shrinkwrap file
+14 verbose stack     at Arborist.loadVirtual (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/load-virtual.js:51:18)
+14 verbose stack     at async Arborist.audit (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/index.js:241:14)
+14 verbose stack     at async Audit.auditAdvisories (/usr/local/lib/node_modules/npm/lib/commands/audit.js:69:5)
+14 verbose stack     at async Audit.exec (/usr/local/lib/node_modules/npm/lib/commands/audit.js:49:7)
+14 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+14 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+15 error code ENOLOCK
+16 error audit This command requires an existing lockfile.
+17 error audit Try creating one first with: npm i --package-lock-only
+18 error audit Original error: loadVirtual requires existing shrinkwrap file
+19 silly unfinished npm timer audit 1792913549192
+20 verbose cwd /workspace
+21 verbose os Linux 6.18.33.2-microsoft-standard-WSL2
+22 verbose node v20.20.2
+23 verbose npm  v10.8.2
+24 verbose exit 1
+25 verbose code 1
+26 error A complete log of this run can be found in: /workspace/.npm-cache/_logs/2026-10-25T07_32_28_732Z-debug-0.log
